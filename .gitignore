@@ -30,5 +30,6 @@
 *.exe
 *.out
 *.app
+
 /day_1/.vscode
 /.vscode
