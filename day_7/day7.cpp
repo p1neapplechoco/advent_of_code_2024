@@ -12,7 +12,7 @@ long long part2();
 
 int main()
 {
-    // cout << part1();
+    cout << part1();
     cout << part2();
 }
 

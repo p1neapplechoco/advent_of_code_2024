@@ -16,8 +16,8 @@ int part_2();
 
 int main()
 {
-    cout << part_1();
-    // cout << part_2();
+    cout << "Part 1: " << part1() << endl;
+    cout << "Part 2: " << part2() << endl;
 }
 
 int part_1()

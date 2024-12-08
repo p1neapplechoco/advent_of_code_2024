@@ -10,8 +10,8 @@ int part2();
 
 int main()
 {
-    cout << part1();
-    // cout << part2();
+    cout << "Part 1: " << part1() << endl;
+    cout << "Part 2: " << part2() << endl;
 }
 
 int substrCount(string str, string substr)
