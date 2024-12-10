@@ -11,8 +11,8 @@ unsigned long long part2();
 
 int main()
 {
-    cout << "Part 1:" << part1() << endl;
-    cout << "Part 2:" << part2() << endl;
+    cout << "Part 1: " << part1() << endl;
+    cout << "Part 2: " << part2() << endl;
 }
 
 unsigned long long helperPart1(string line)

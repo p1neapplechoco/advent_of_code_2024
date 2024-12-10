@@ -31,7 +31,6 @@ int dfsPart1(vector<string> grid, int x, int y, int idx, map<pair<int, int>, int
             visited[{x, y}] = 1;
             return 1;
         }
-        cout << endl;
         return 0;
     }
 
