@@ -11,8 +11,8 @@ void readFilePart1(string, vector<int> &, vector<int> &);
 void readFilePart2(string, vector<int> &, map<int, int> &);
 void countingSort(vector<int> &);
 
-int part_1();
-int part_2();
+int part1();
+int part2();
 
 int main()
 {
@@ -20,7 +20,7 @@ int main()
     cout << "Part 2: " << part2() << endl;
 }
 
-int part_1()
+int part1()
 {
     vector<int> arr_1;
     vector<int> arr_2;
@@ -37,7 +37,7 @@ int part_1()
     return res;
 }
 
-int part_2()
+int part2()
 {
     vector<int> arr;
     map<int, int> mp;
