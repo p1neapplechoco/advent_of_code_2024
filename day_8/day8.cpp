@@ -6,6 +6,9 @@
 
 using namespace std;
 
+typedef long long ll;
+typedef unsigned long long ull;
+
 void readFile(string filename, unordered_map<char, vector<pair<int, int>>> &antennas, int &m, int &n);
 
 int part1();

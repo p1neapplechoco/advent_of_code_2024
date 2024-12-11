@@ -7,12 +7,15 @@
 
 using namespace std;
 
+typedef long long ll;
+typedef unsigned long long ull;
+
 void readFilePart1(string, vector<int> &, vector<int> &);
 void readFilePart2(string, vector<int> &, map<int, int> &);
 void countingSort(vector<int> &);
 
-int part1();
-int part2();
+ll part1();
+ll part2();
 
 int main()
 {
@@ -20,7 +23,7 @@ int main()
     cout << "Part 2: " << part2() << endl;
 }
 
-int part1()
+ll part1()
 {
     vector<int> arr_1;
     vector<int> arr_2;
@@ -30,21 +33,21 @@ int part1()
     countingSort(arr_1);
     countingSort(arr_2);
 
-    int res = 0;
+    ll res = 0;
     int n = arr_1.size();
     for (int i = 0; i < n; i++)
         res += abs(arr_1[n - i - 1] - arr_2[n - i - 1]);
     return res;
 }
 
-int part2()
+ll part2()
 {
     vector<int> arr;
     map<int, int> mp;
 
     readFilePart2("input.txt", arr, mp);
 
-    int res = 0;
+    ll res = 0;
     for (int e : arr)
         res += e * mp[e];
 

@@ -7,8 +7,11 @@
 
 using namespace std;
 
-int part1();
-int part2();
+typedef long long ll;
+typedef unsigned long long ull;
+
+ull part1();
+ull part2();
 
 int main()
 {
@@ -16,7 +19,7 @@ int main()
     cout << "Part 2: " << part2() << endl;
 }
 
-int dfsPart1(vector<string> grid, int x, int y, int idx, map<pair<int, int>, int> &visited)
+ull dfsPart1(vector<string> grid, int x, int y, int idx, map<pair<int, int>, int> &visited)
 {
     if (x < 0 || y < 0 || x >= grid.size() || y >= grid[0].size())
         return 0;
@@ -40,7 +43,7 @@ int dfsPart1(vector<string> grid, int x, int y, int idx, map<pair<int, int>, int
            dfsPart1(grid, x - 1, y, idx + 1, visited);
 }
 
-int part1()
+ull part1()
 {
     set<pair<int, int>> starts;
     vector<string> grid;
@@ -59,7 +62,7 @@ int part1()
         r++;
     }
 
-    int res = 0;
+    ull res = 0;
 
     for (auto &e : starts)
     {
@@ -73,7 +76,7 @@ int part1()
     return res;
 }
 
-int dfsPart2(vector<string> grid, int x, int y, int idx, map<pair<int, int>, int> &visited)
+ull dfsPart2(vector<string> grid, int x, int y, int idx, map<pair<int, int>, int> &visited)
 {
     if (x < 0 || y < 0 || x >= grid.size() || y >= grid[0].size())
         return 0;
@@ -90,7 +93,7 @@ int dfsPart2(vector<string> grid, int x, int y, int idx, map<pair<int, int>, int
            dfsPart2(grid, x - 1, y, idx + 1, visited);
 }
 
-int part2()
+ull part2()
 {
     set<pair<int, int>> starts;
     vector<string> grid;
@@ -109,7 +112,7 @@ int part2()
         r++;
     }
 
-    int res = 0;
+    ull res = 0;
 
     for (auto &e : starts)
     {

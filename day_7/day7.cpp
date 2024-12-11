@@ -5,10 +5,13 @@
 
 using namespace std;
 
-void readFile(string filename, vector<long long> &nums, long long &target);
+typedef ll ll;
+typedef unsigned long long ull;
 
-long long part1();
-long long part2();
+void readFile(string filename, vector<ll> &nums, ll &target);
+
+ll part1();
+ll part2();
 
 int main()
 {
@@ -16,7 +19,7 @@ int main()
     cout << "Part 2: " << part2() << endl;
 }
 
-bool sumOrProduct(vector<long long> &nums, long long target, long long cur, int idx)
+bool sumOrProduct(vector<ll> &nums, ll target, ll cur, int idx)
 {
     if (idx >= nums.size())
         return cur == target;
@@ -24,17 +27,17 @@ bool sumOrProduct(vector<long long> &nums, long long target, long long cur, int 
     return sumOrProduct(nums, target, cur + nums[idx], idx + 1) || sumOrProduct(nums, target, cur * nums[idx], idx + 1);
 }
 
-long long part1()
+ll part1()
 {
     ifstream input("input.txt");
     string line;
 
-    long long res = 0;
+    ll res = 0;
 
     while (getline(input, line))
     {
-        vector<long long> nums;
-        long long target;
+        vector<ll> nums;
+        ll target;
 
         int idx = line.find(':');
         target = stoll(line.substr(0, idx += 2));
@@ -63,7 +66,7 @@ long long part1()
     return res;
 }
 
-bool concatenation(vector<long long> &nums, long long target, long long cur, int idx)
+bool concatenation(vector<ll> &nums, ll target, ll cur, int idx)
 {
     if (idx >= nums.size())
         return cur == target;
@@ -73,17 +76,17 @@ bool concatenation(vector<long long> &nums, long long target, long long cur, int
            concatenation(nums, target, stoll(to_string(cur) + to_string(nums[idx])), idx + 1);
 }
 
-long long part2()
+ll part2()
 {
     ifstream input("input.txt");
     string line;
 
-    long long res = 0;
+    ll res = 0;
 
     while (getline(input, line))
     {
-        vector<long long> nums;
-        long long target;
+        vector<ll> nums;
+        ll target;
 
         int idx = line.find(':');
         target = stoll(line.substr(0, idx += 2));

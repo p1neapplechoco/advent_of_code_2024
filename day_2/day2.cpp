@@ -6,6 +6,9 @@
 
 using namespace std;
 
+typedef long long ll;
+typedef unsigned long long ull;
+
 int part1();
 int part2();
 

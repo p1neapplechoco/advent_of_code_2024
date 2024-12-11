@@ -6,8 +6,11 @@
 
 using namespace std;
 
-unsigned long long part1();
-unsigned long long part2();
+typedef long long ll;
+typedef unsigned long long ull;
+
+ull part1();
+ull part2();
 
 int main()
 {
@@ -15,7 +18,7 @@ int main()
     cout << "Part 2: " << part2() << endl;
 }
 
-unsigned long long helperPart1(string line)
+ull helperPart1(string line)
 {
     vector<int> tmp;
 
@@ -48,7 +51,7 @@ unsigned long long helperPart1(string line)
         output << e << ",";
     output.close();
 
-    unsigned long long res = 0;
+    ull res = 0;
 
     for (int i = 0; tmp[i] != -1; i++)
         res += (i * tmp[i]);
@@ -56,7 +59,7 @@ unsigned long long helperPart1(string line)
     return res;
 }
 
-unsigned long long part1()
+ull part1()
 {
     ifstream input("input.txt");
     string line;
@@ -68,7 +71,7 @@ unsigned long long part1()
     return helperPart1(line);
 }
 
-unsigned long long helperPart2(string line)
+ull helperPart2(string line)
 {
     vector<int> tmp;
 
@@ -80,7 +83,7 @@ unsigned long long helperPart2(string line)
             while (line[i]-- - '0')
                 tmp.push_back(i / 2);
 
-    unsigned long long res = 0;
+    ull res = 0;
 
     int r_r = tmp.size() - 1;
     int r_l = r_r;
@@ -140,7 +143,7 @@ unsigned long long helperPart2(string line)
     return res;
 }
 
-unsigned long long part2()
+ull part2()
 {
     ifstream input("input.txt");
     string line;

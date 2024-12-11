@@ -5,6 +5,9 @@
 
 using namespace std;
 
+typedef long long ll;
+typedef unsigned long long ull;
+
 void readFile(string, vector<vector<int>> &, int **&);
 
 int part1();
